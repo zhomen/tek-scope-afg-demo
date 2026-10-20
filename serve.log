@@ -1,0 +1,54 @@
+C:\Users\adm-u653647\mhs_setups\tek-scope-afg-demo\launch.py:103: DeprecationWarning: Publisher is deprecated; compose MhsDict.attach() + driver.mount() + driver.start() (see issue #256).
+  return Publisher(
+C:\Users\adm-u653647\python-sdk\src\mhs\mhs_api\attach.py:1109: UserWarning: slot 'afg/amplitude' declares an mhs_watchdog Heartbeat link: a Watchdog must beat it within its timeout or writes to this slot freeze
+  d.setup_slot(key, slot_kind, *chain, **kw)
+C:\Users\adm-u653647\python-sdk\src\mhs\mhs_api\attach.py:1109: UserWarning: slot 'afg/frequency' declares an mhs_watchdog Heartbeat link: a Watchdog must beat it within its timeout or writes to this slot freeze
+  d.setup_slot(key, slot_kind, *chain, **kw)
+C:\Users\adm-u653647\python-sdk\src\mhs\mhs_api\attach.py:1109: UserWarning: slot 'afg/waveform' declares an mhs_watchdog Heartbeat link: a Watchdog must beat it within its timeout or writes to this slot freeze
+  d.setup_slot(key, slot_kind, *chain, **kw)
+C:\Users\adm-u653647\python-sdk\src\mhs\mhs_api\attach.py:1109: UserWarning: slot 'scope/run' declares an mhs_watchdog Heartbeat link: a Watchdog must beat it within its timeout or writes to this slot freeze
+  d.setup_slot(key, slot_kind, *chain, **kw)
+the Dict manifest is sealed with the setup placeholder identity; device 'tek-scope-afg-demo' cannot claim the document top level (S10.3). Mount before seal_manifest().
+VERIFY OK scope/ch1_trace = <memory at 0x000001FB1A9A4A00>
+VERIFY OK scope/meas_frequency = 0.0
+VERIFY OK scope/meas_vpp = 0.002204916155054207
+VERIFY OK afg/amplitude = 1.0
+VERIFY OK afg/frequency = 1000.0
+VERIFY OK afg/output_enable = 0
+VERIFY OK afg/waveform = 0
+VERIFY OK scope/ch1_scale = 0.5
+VERIFY OK scope/run = 1
+VERIFY OK __estop__ = False
+VERIFY DONE failures=0
+ESTOP triggered: fired estop_write on 4 slot(s)
+ESTOP DRILL engaged: on_disconnect applied to 4 slot(s)
+ESTOP DRILL OK __estop__ = True
+ESTOP DRILL OK afg/amplitude = 0.01 (policy SAFE)
+ESTOP DRILL OK afg/frequency = 1.0 (policy SAFE)
+ESTOP DRILL OK afg/waveform = 0 (policy SAFE)
+ESTOP DRILL OK scope/run = 0 (policy ZERO)
+ESTOP DRILL done: __estop__ stays latched (restart clears it), drill failures=0
+ESTOP DRILL recovery: restarting the publisher to clear the latch
+the Dict manifest is sealed; departed device 'tek-scope-afg-demo' stays in the document (roster/attribution cannot be rewritten)
+the Dict manifest is sealed with the setup placeholder identity; device 'tek-scope-afg-demo' cannot claim the document top level (S10.3). Mount before seal_manifest().
+VERIFY OK scope/ch1_trace = <memory at 0x000001FB1A9A6680>
+VERIFY OK scope/meas_frequency = 0.0
+VERIFY OK scope/meas_vpp = 0.0019083331599208642
+VERIFY OK afg/amplitude = 0.01
+VERIFY OK afg/frequency = 1.0
+VERIFY OK afg/output_enable = 0
+VERIFY OK afg/waveform = 0
+VERIFY OK scope/ch1_scale = 0.5
+VERIFY OK scope/run = 0
+VERIFY OK __estop__ = False
+VERIFY DONE failures=0
+SERVING setup=tek-scope-afg-demo mcp=http://127.0.0.1:8765/sse storage=inmem
+slot 'scope/ch1_trace' quarantined from the MCP surface: name contains characters outside [A-Za-z0-9_.-] (got 'scope/ch1_trace'); refusing to embed it in tool names / URIs (listed under quarantined_slots in describe_setup)
+slot 'scope/meas_frequency' quarantined from the MCP surface: name contains characters outside [A-Za-z0-9_.-] (got 'scope/meas_frequency'); refusing to embed it in tool names / URIs (listed under quarantined_slots in describe_setup)
+slot 'scope/meas_vpp' quarantined from the MCP surface: name contains characters outside [A-Za-z0-9_.-] (got 'scope/meas_vpp'); refusing to embed it in tool names / URIs (listed under quarantined_slots in describe_setup)
+slot 'afg/amplitude' quarantined from the MCP surface: name contains characters outside [A-Za-z0-9_.-] (got 'afg/amplitude'); refusing to embed it in tool names / URIs (listed under quarantined_slots in describe_setup)
+slot 'afg/frequency' quarantined from the MCP surface: name contains characters outside [A-Za-z0-9_.-] (got 'afg/frequency'); refusing to embed it in tool names / URIs (listed under quarantined_slots in describe_setup)
+slot 'afg/output_enable' quarantined from the MCP surface: name contains characters outside [A-Za-z0-9_.-] (got 'afg/output_enable'); refusing to embed it in tool names / URIs (listed under quarantined_slots in describe_setup)
+slot 'afg/waveform' quarantined from the MCP surface: name contains characters outside [A-Za-z0-9_.-] (got 'afg/waveform'); refusing to embed it in tool names / URIs (listed under quarantined_slots in describe_setup)
+slot 'scope/ch1_scale' quarantined from the MCP surface: name contains characters outside [A-Za-z0-9_.-] (got 'scope/ch1_scale'); refusing to embed it in tool names / URIs (listed under quarantined_slots in describe_setup)
+slot 'scope/run' quarantined from the MCP surface: name contains characters outside [A-Za-z0-9_.-] (got 'scope/run'); refusing to embed it in tool names / URIs (listed under quarantined_slots in describe_setup)
